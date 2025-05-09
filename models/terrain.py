@@ -109,27 +109,4 @@ class TerrainSystem:
                 y += y_inc
                 error += dx
 
-        return points
-    
-    def get_initial_positions(self) -> dict:
-        """Get initial positions for both teams"""
-        # Define initial positions for each team
-        # These are example positions - adjust based on your requirements
-        return {
-            "RED": {
-                "DRONE": [(10, 10), (15, 10)],
-                "TANK": [(20, 20), (25, 20), (30, 20), (35, 20)],
-                "ANTI_TANK": [(40, 30), (45, 30), (50, 30), (55, 30), (60, 30), (65, 30)],
-                "INFANTRY": [(70, 40) + (i, i) for i in range(24)],
-                "COMMAND_POST": [(100, 50)],
-                "ARTILLERY": [(120, 60), (125, 60), (130, 60), (135, 60), (140, 60), (145, 60)]
-            },
-            "BLUE": {
-                "DRONE": [(150, 300), (155, 300)],
-                "TANK": [(140, 290), (145, 290), (150, 290), (155, 290)],
-                "ANTI_TANK": [(130, 280), (135, 280), (140, 280), (145, 280), (150, 280), (155, 280)],
-                "INFANTRY": [(120, 270) + (i, i) for i in range(24)],
-                "COMMAND_POST": [(100, 260)],
-                "ARTILLERY": [(80, 250), (85, 250), (90, 250), (95, 250), (100, 250), (105, 250)]
-            }
-        } 
+        return points 

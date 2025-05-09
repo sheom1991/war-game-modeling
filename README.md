@@ -1,42 +1,118 @@
-# War Game Simulation (background.png 기반)
+# War Game Simulation
 
 ## 개요
-- background.png 이미지를 유일한 좌표계(칠판)로 사용
-- 모든 유닛의 위치, 이동, 전투, 시각화는 background.png의 (x, y) 픽셀 좌표로만 처리
+이 프로젝트는 전쟁 게임 시뮬레이션을 구현한 Python 기반 애플리케이션입니다. background.png 이미지를 기반으로 유닛의 위치, 이동, 전투를 시뮬레이션하고 시각화합니다.
+
+## 주요 기능
+- 유닛 위치 및 이동 시뮬레이션
+- 전투 시스템 구현
+- 지형 효과 반영
+- 시각화 및 애니메이션 생성
+- HTML 기반 인터랙티브 시각화
+- 전투 로그 및 메트릭스 분석
+
+## TODO
+- 커맨드 레벨 반영해야 함
+- 유닛의 이동방향 조정 필요
+- 지형 특성 반영 구조 추가
+    - 가시선 분석 (현재 x, y 좌표만 사용) - `combat.py`, `def los` function 내 조정 필요
+    - 수로 등 장애물 인식
+- 
+
+
+## 프로젝트 구조
+```
+war-game-modeling/
+├── main.py                 # 메인 실행 파일
+├── test_simulation.py      # 시뮬레이션 테스트 및 실행
+├── config.yaml             # 시뮬레이션 설정 파일
+├── requirements.txt        # 의존성 패키지 목록
+├── README.md               # 프로젝트 문서
+├── models/                 # 핵심 모델 구현
+│   ├── combat.py           # 전투 시스템
+│   ├── command.py          # 명령 시스템
+│   ├── events.py           # 이벤트 관리
+│   ├── game_state.py       # 게임 상태 관리
+│   ├── logging.py          # 로깅 시스템
+│   ├── probabilities.py    # 확률 계산
+│   ├── terrain.py          # 지형 시스템
+│   ├── unit.py             # 유닛 정의
+│   └── visualization.py    # 시각화 시스템
+├── database/               # 데이터 파일
+│   ├── rifle_hit_prob.csv  # 소총 명중 확률
+│   ├── rifle_damage_prob.csv # 소총 피해 확률
+│   ├── tank_hit_prob.csv   # 전차 명중 확률
+│   └── tank_damage_prob.csv # 전차 피해 확률
+└── results/                # 시뮬레이션 결과
+    ├── background.png      # 배경 이미지
+    ├── simulation_log.json # 시뮬레이션 로그
+    ├── simulation_metrics.png # 시뮬레이션 결과 그래프 - 수정 필요
+    ├── dem_only.png        # 종료 시점 이미지
+    └── simulation.mp4      # 시뮬레이션 동영상
+```
+
+## 시뮬레이션 프로세스
+1. **초기화**: config.yaml 파일에서 설정을 로드하고 유닛을 초기화합니다.
+2. **시뮬레이션 루프**: 각 시간 단계마다 다음을 수행합니다.
+   - 유닛 상태 업데이트
+   - 전투 처리
+   - 이동 처리
+   - 이벤트 로깅
+   - 상태 스냅샷 저장
+3. **시각화**: 시뮬레이션 결과를 시각화합니다.
+   - MP4 애니메이션 생성
+   - HTML 인터랙티브 시각화 생성
+   - 메트릭스 그래프 생성
 
 ## 좌표계
 - (0,0): background.png의 좌상단(왼쪽 위) 픽셀
 - (width-1, height-1): 우하단(오른쪽 아래) 픽셀
+    - (996, 693)
 - 모든 유닛 위치/이동/거리 계산은 이 픽셀 좌표계만 사용
 
-## config.yaml 예시
-```yaml
-initial_positions:
-  RED:
-    TANK: [[100, 200], ...]
-    ...
-  BLUE:
-    TANK: [[900, 200], ...]
-    ...
-```
-- (x, y)는 background.png의 픽셀 좌표
+## 실행 방법
+1. 패키지 설치:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 실행법
-1. background.png를 results/ 폴더에 준비
 2. config.yaml에서 유닛 위치 등 설정
-3. 실행: `python test_simulation.py`
-4. 결과: results/with_drone/ 폴더에 mp4, png, json 등 생성
 
-## 코드 구조
-- background.png: 유일한 좌표계
-- config.yaml: 유닛 위치 등 파라미터
-- 모든 연산/시각화: (x, y) 픽셀 좌표만 사용
+3. 시뮬레이션 실행:
+   ```bash
+   python test_simulation.py
+   ```
 
-## 확장성
-- terrain_mask.npy 등으로 지형 특성(고지, 수로 등) 추가 가능
-- 유닛 상태(파괴, fire 등) 시각화/로그에 반영 가능
+4. 결과 확인:
+   - results/ 폴더에서 시뮬레이션 결과 확인
+   - MP4 애니메이션 확인
+   - simulation_log.json에서 상세 로그 확인
 
-## TODO
-- 유닛 상태별 시각화 개선 (fire, destroyed 등)
-- 블루팀 이동/공격 로직 점검
-- 지형 특성 반영 구조 추가
+## 주요 모듈 설명
+
+### models/combat.py
+전투 시스템을 구현합니다. 유닛 간 전투, 명중 확률 계산, 피해 처리 등을 담당합니다.
+
+### models/command.py
+명령 시스템을 구현합니다. 전투 단계(FIRE_SUPPRESSION, ARMOR_ENGAGEMENT, CLOSE_COMBAT)를 관리합니다.
+
+### models/events.py
+이벤트 큐를 관리합니다. 시뮬레이션 중 발생하는 이벤트를 시간순으로 처리합니다.
+
+### models/game_state.py
+게임 상태를 관리합니다. 팀 초기화, 전투력 평가, 단계 전환 등을 처리합니다.
+
+### models/logging.py
+로깅 시스템을 구현합니다. 이벤트와 상태 스냅샷을 기록하고 저장합니다.
+
+### models/probabilities.py
+확률 계산 시스템을 구현합니다. 명중 확률, 피해 확률 등을 계산합니다.
+
+### models/terrain.py
+지형 시스템을 구현합니다. 지형 효과, 시야 확인 등을 처리합니다.
+
+### models/unit.py
+유닛 정의를 포함합니다. 유닛 타입, 상태, 행동 등을 정의합니다.
+
+### models/visualization.py
+시각화 시스템을 구현합니다. 맵 시각화, 애니메이션 생성 등을 담당합니다.

@@ -52,6 +52,7 @@ class SimulationVisualizer:
             x, y = unit['position']
             color = 'red' if unit['team'] == 'RED' else 'blue'
             marker = self._get_marker(unit['type'])
+
             # 상태별 시각화
             if unit.get('health', 1) <= 0 or unit.get('status', '').upper() in ['K_KILL', 'DESTROYED']:
                 facecolor = 'gray'
@@ -63,7 +64,8 @@ class SimulationVisualizer:
                 facecolor = color
                 alpha = 1.0
             plt.scatter(x, y, c=facecolor, marker=marker, s=120, edgecolors='k', alpha=alpha, label=f"{unit['team']}_{unit['type']}")
-        # 범례
+        
+        # Legend
         handles = [
             mlines.Line2D([], [], color='red', marker='o', markerfacecolor='red', label='RED', markersize=10, linestyle='None'),
             mlines.Line2D([], [], color='blue', marker='o', markerfacecolor='blue', label='BLUE', markersize=10, linestyle='None'),
@@ -147,30 +149,39 @@ class SimulationVisualizer:
             else:
                 return unit_id
         def get_kill_log(snapshot_time):
-            if snapshot_time == 0:
-                return []
-            if not kill_events:
-                return []
-            recent = []
-            for e in reversed(kill_events):
-                if snapshot_time - e['timestamp'] <= kill_log_duration:
-                    actor = parse_unit_kor(e['actor_id'])
-                    target = parse_unit_kor(e['target_id'])
-                    recent.append(f"{actor}이 {target}를 파괴.")
-                if len(recent) >= 5:
-                    break
-            return list(reversed(recent))
+            # 이벤트 로그 기반 파괴 이벤트 집계
+            kill_events = []
+            destroyed_targets = set()
+            for e in events or []:
+                if (
+                    e.get('event_type') == 'COMBAT'
+                    and e.get('details', {}).get('hit')
+                    and e.get('details', {}).get('damage', 0) > 0
+                    and e.get('timestamp', 0) <= snapshot_time
+                ):
+                    target_id = e.get('target_id', '')
+                    if target_id and target_id not in destroyed_targets:
+                        destroyed_targets.add(target_id)
+                        actor = parse_unit_kor(e['actor_id'])
+                        target = parse_unit_kor(target_id)
+                        # 팀에 따라 색상 설정
+                        actor_color = 'red' if 'RED' in e['actor_id'] else 'blue'
+                        kill_events.append((f"{actor}이 {target}를 파괴.", actor_color))
+            return kill_events[-5:]  # 최근 5개만 표시
+        
         def update(frame_idx):
             self.ax_map.clear()
             self.ax_panel.clear()
             self.ax_panel.axis('off')
             snapshot = state_snapshots[frame_indices[frame_idx]]
             self.ax_map.imshow(bg_img)
+
             for unit in snapshot.units:
                 x, y = unit['position']
                 unit_type = unit['type']
                 team = unit['team']
                 marker = marker_map.get(unit_type, 'o')
+
                 # 상태별 시각화
                 if unit.get('health', 1) <= 0 or unit.get('status', '').upper() in ['K_KILL', 'DESTROYED']:
                     facecolor = 'gray'
@@ -185,11 +196,13 @@ class SimulationVisualizer:
                     edgecolor = 'none'
                     alpha = 1.0
                 self.ax_map.scatter(x, y, c=facecolor, marker=marker, s=180, edgecolors=edgecolor, linewidths=2.5, alpha=alpha, zorder=10)
+            
             self.ax_map.set_title(f'Time: {snapshot.timestamp:.1f}')
             self.ax_map.axis('off')
+            
             # 무기 종류
             weapon_legend = [
-                mlines.Line2D([], [], color='gray', marker=marker_map[ut], markerfacecolor='gray', markeredgecolor='gray', markersize=14, label=type_kor[ut], linestyle='None')
+                mlines.Line2D([], [], color='black', marker=marker_map[ut], markerfacecolor='black', markeredgecolor='black', markersize=14, label=type_kor[ut], linestyle='None')
                 for ut in unit_type_list
             ]
             # 상태(색상)
@@ -201,6 +214,7 @@ class SimulationVisualizer:
                 mlines.Line2D([], [], color='yellow', marker='o', markerfacecolor='yellow', markeredgecolor='blue', markersize=14, label='공격(Blue)', linestyle='None'),
                 mlines.Line2D([], [], color='gray', marker='o', markerfacecolor='gray', markeredgecolor='blue', markersize=14, label='파괴(Blue)', linestyle='None', alpha=0.7),
             ]
+            
             # 무기 종류 범례 (왼쪽 위)
             weapon_legend_artist = self.ax_map.legend(
                 handles=weapon_legend, loc='upper left', fontsize=13, title='무기 종류',
@@ -209,6 +223,7 @@ class SimulationVisualizer:
             weapon_legend_artist.get_frame().set_facecolor('white')
             weapon_legend_artist.get_frame().set_alpha(0.5)
             self.ax_map.add_artist(weapon_legend_artist)
+            
             # 상태(색상) 범례 (오른쪽 위)
             status_legend_artist = self.ax_map.legend(
                 handles=status_legend, loc='upper right', fontsize=13, title='상태(색상)',
@@ -216,12 +231,16 @@ class SimulationVisualizer:
             )
             status_legend_artist.get_frame().set_facecolor('white')
             status_legend_artist.get_frame().set_alpha(0.5)
+            
             # 우측 패널(1/4): kill log + 현황판
             kill_log = get_kill_log(snapshot.timestamp)
             y0 = 0.95
             self.ax_panel.text(0.5, y0, 'Kill Log', fontsize=16, fontweight='bold', ha='center', va='top', transform=self.ax_panel.transAxes)
-            for i, msg in enumerate(kill_log):
-                self.ax_panel.text(0.5, y0-0.07*(i+1), msg, fontsize=13, color='black', ha='center', va='top', transform=self.ax_panel.transAxes, bbox=dict(facecolor='white', alpha=0.8, edgecolor='none'))
+            
+            for i, (msg, color) in enumerate(get_kill_log(snapshot.timestamp)):
+                self.ax_panel.text(0.5, y0 - 0.07 * (i + 1), msg, fontsize=13, color=color, ha='center', va='top', transform=self.ax_panel.transAxes, bbox=dict(facecolor='white', alpha=0.8, edgecolor='none'))
+            
+            
             curr_counts = {team: {ut: 0 for ut in unit_type_list} for team in team_list}
             for unit in snapshot.units:
                 if unit.get('health', 1) > 0:
@@ -238,6 +257,8 @@ class SimulationVisualizer:
             table.set_fontsize(11)
             self.ax_panel.axis('off')
             pbar.update(1)
+        
+        # Create animation
         anim = FuncAnimation(
             self.fig, update,
             frames=n_frames,
@@ -248,31 +269,83 @@ class SimulationVisualizer:
         pbar.close()
 
     def plot_metrics(self, log_file: str):
-        """Plot various metrics from the simulation log"""
         with open(log_file, 'r') as f:
             log_data = json.load(f)
-        # Extract metrics
-        timestamps = [snapshot['timestamp'] for snapshot in log_data['state_snapshots']]
-        red_units = [len([u for u in snapshot['units'] if u['team'] == 'RED']) 
-                    for snapshot in log_data['state_snapshots']]
-        blue_units = [len([u for u in snapshot['units'] if u['team'] == 'BLUE']) 
-                     for snapshot in log_data['state_snapshots']]
-        # Create plots
-        fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(16, 10))
-        # Plot unit counts
-        ax1.plot(timestamps, red_units, 'r-', label='Red Team')
-        ax1.plot(timestamps, blue_units, 'b-', label='Blue Team')
-        ax1.set_xlabel('Time')
-        ax1.set_ylabel('Number of Units')
-        ax1.legend()
-        ax1.set_title('Unit Counts Over Time')
-        # Plot combat events
-        combat_events = [e for e in log_data['events'] if e['event_type'] == 'COMBAT']
-        event_times = [e['timestamp'] for e in combat_events]
-        ax2.hist(event_times, bins=20)
-        ax2.set_xlabel('Time')
-        ax2.set_ylabel('Number of Combat Events')
-        ax2.set_title('Combat Event Distribution')
+
+        # 1) 시간순으로 스냅샷 정렬
+        snaps = sorted(log_data['state_snapshots'], key=lambda s: s['timestamp'])
+        timestamps = [s['timestamp'] for s in snaps]
+
+        # 2) 전체 Alive 유닛 수
+        total_red  = [sum(1 for u in s['units']
+                        if u['team']=='RED' and u.get('status')=='Alive')
+                    for s in snaps]
+        total_blue = [sum(1 for u in s['units']
+                        if u['team']=='BLUE' and u.get('status')=='Alive')
+                    for s in snaps]
+
+        # 3) 전투 이벤트 타임스탬프
+        combat_events = [e['timestamp'] for e in log_data['events']
+                        if e['event_type']=='COMBAT']
+
+        # 4) 유형별 Alive 유닛 수 집계
+        unit_types = ['ARTILLERY','DRONE','TANK','ANTI_TANK','INFANTRY','COMMAND_POST']
+        red_counts  = {t: [] for t in unit_types}
+        blue_counts = {t: [] for t in unit_types}
+        for s in snaps:
+            for t in unit_types:
+                red_counts[t].append(
+                    sum(1 for u in s['units']
+                        if u['team']=='RED' and u.get('type')==t and u.get('status')=='Alive')
+                )
+                blue_counts[t].append(
+                    sum(1 for u in s['units']
+                        if u['team']=='BLUE' and u.get('type')==t and u.get('status')=='Alive')
+                )
+
+        # 5) 플롯: 4행(전체, 전투, RED 스택, BLUE 스택)
+        fig, (ax0, ax1, ax2, ax3) = plt.subplots(4, 1, figsize=(16, 16), sharex=True)
+
+        # (0) 전체 유닛 선그래프
+        ax0.plot(timestamps, total_red,  'r-', label='Total RED')
+        ax0.plot(timestamps, total_blue, 'b-', label='Total BLUE')
+        ax0.set_ylabel('Units')
+        ax0.set_title('Total Alive Units Over Time')
+        ax0.legend()
+
+        # (1) 전투 이벤트 히스토그램
+        ax1.hist(combat_events, bins=20, color='gray')
+        ax1.set_ylabel('#Events')
+        ax1.set_title('Combat Event Distribution')
+
+        # 색상 팔레트(Set2, 6가지)
+        palette = ['#66C2A5', '#FC8D62', '#8DA0CB', '#E78AC3', '#A6D854', '#FFD92F']
+
+        # (2) RED 팀 스택바
+        bottom = np.zeros(len(snaps))
+        for idx, t in enumerate(unit_types):
+            vals = np.array(red_counts[t])
+            ax2.bar(timestamps, vals, bottom=bottom, 
+                    width=(timestamps[1]-timestamps[0])*0.8,
+                    color=palette[idx], label=t)
+            bottom += vals
+        ax2.set_ylabel('RED Units')
+        ax2.set_title('RED Team Composition Over Time')
+        ax2.legend(loc='upper right')
+
+        # (3) BLUE 팀 스택바
+        bottom = np.zeros(len(snaps))
+        for idx, t in enumerate(unit_types):
+            vals = np.array(blue_counts[t])
+            ax3.bar(timestamps, vals, bottom=bottom, 
+                    width=(timestamps[1]-timestamps[0])*0.8,
+                    color=palette[idx], label=t)
+            bottom += vals
+        ax3.set_ylabel('BLUE Units')
+        ax3.set_title('BLUE Team Composition Over Time')
+        ax3.legend(loc='upper right')
+
+        ax3.set_xlabel('Time')
         plt.tight_layout()
         plt.savefig(os.path.join(self.output_dir, 'simulation_metrics.png'))
 
@@ -316,17 +389,23 @@ class SimulationVisualizer:
                 return f"{team_kor.get(team, team)}_{type_kor.get(typ, typ)}"
             return unit_id
         def get_kill_log(snapshot_time):
-            if snapshot_time == 0 or not kill_events:
-                return []
-            recent = []
-            for e in reversed(kill_events):
-                if snapshot_time - e['timestamp'] <= kill_log_duration:
-                    actor = parse_unit_kor(e['actor_id'])
-                    target = parse_unit_kor(e['target_id'])
-                    recent.append(f"{actor}이 {target}를 파괴.")
-                if len(recent) >= 5:
-                    break
-            return list(reversed(recent))
+            # 이벤트 로그 기반 파괴 이벤트 집계
+            kill_events = []
+            destroyed_targets = set()
+            for e in events or []:
+                if (
+                    e.get('event_type') == 'COMBAT'
+                    and e.get('details', {}).get('hit')
+                    and e.get('details', {}).get('damage', 0) > 0
+                    and e.get('timestamp', 0) <= snapshot_time
+                ):
+                    target_id = e.get('target_id', '')
+                    if target_id and target_id not in destroyed_targets:
+                        destroyed_targets.add(target_id)
+                        actor = parse_unit_kor(e['actor_id'])
+                        target = parse_unit_kor(target_id)
+                        kill_events.append(f"{actor}이 {target}를 파괴.")
+            return kill_events[-5:]  # 최근 5개만 표시
         # Adjust layout for slider
         self.fig.subplots_adjust(bottom=0.15)
         # Draw frame function
@@ -381,67 +460,3 @@ class SimulationVisualizer:
         slider = mwidgets.Slider(slider_ax, 'Frame', 0, n_frames-1, valinit=0, valstep=1)
         slider.on_changed(lambda val: draw_frame(int(val)))
         plt.show()
-
-    def create_html_visualization(self, state_snapshots: List[StateSnapshot], events: list = None, unit_type_list=None, team_list=None, total_counts=None, kill_log_duration: float = 3.0, output_file: str = 'simulation.html'):
-        """Generate interactive HTML visualization with slider using Plotly."""
-        # determine HTML output path
-        output_path = output_file if os.path.isabs(output_file) else os.path.join(self.output_dir, output_file)
-        # encode background image to base64
-        img = Image.open(self.bg_path)
-        buf = io.BytesIO()
-        img.save(buf, format='PNG')
-        b64 = base64.b64encode(buf.getvalue()).decode()
-        img_uri = f"data:image/png;base64,{b64}"
-        # default parameters
-        n_frames = len(state_snapshots)
-        if unit_type_list is None:
-            unit_type_list = ['DRONE', 'TANK', 'ANTI_TANK', 'INFANTRY', 'COMMAND_POST', 'ARTILLERY']
-        if team_list is None:
-            team_list = ['RED', 'BLUE']
-        if total_counts is None:
-            total_counts = {team: {ut: 0 for ut in unit_type_list} for team in team_list}
-            for unit in state_snapshots[0].units:
-                total_counts[unit['team']][unit['type']] += 1
-        team_color = {'RED': 'red', 'BLUE': 'blue'}
-        # symbol mapping for Plotly
-        symbol_map = {'DRONE': 'star', 'TANK': 'square', 'ANTI_TANK': 'triangle-down', 'INFANTRY': 'circle', 'COMMAND_POST': 'x', 'ARTILLERY': 'triangle-up'}
-        # build frames
-        frames = []
-        for idx, snapshot in enumerate(state_snapshots):
-            xs, ys, colors, symbols, line_colors = [], [], [], [], []
-            for unit in snapshot.units:
-                x, y = unit['position']
-                xs.append(x)
-                ys.append(self.img_height - y)
-                team = unit['team']
-                ut = unit['type']
-                if unit.get('health', 1) <= 0 or unit.get('status', '').upper() in ['K_KILL', 'DESTROYED']:
-                    colors.append('gray')
-                    line_colors.append(team_color[team])
-                elif unit.get('action', '').upper() == 'FIRE':
-                    colors.append('yellow')
-                    line_colors.append(team_color[team])
-                else:
-                    colors.append(team_color[team])
-                    line_colors.append('rgba(0,0,0,0)')
-                symbols.append(symbol_map.get(ut, 'circle'))
-            trace = go.Scatter(
-                x=xs, y=ys, mode='markers',
-                marker=dict(color=colors, symbol=symbols, size=14, line=dict(color=line_colors, width=2))
-            )
-            frames.append(go.Frame(data=[trace], name=str(idx)))
-        # initial frame
-        initial_data = frames[0].data
-        layout = go.Layout(
-            width=self.img_width, height=self.img_height,
-            images=[dict(source=img_uri, xref='x', yref='y', x=0, y=self.img_height, sizex=self.img_width, sizey=self.img_height, sizing='stretch', layer='below')],
-            xaxis=dict(range=[0, self.img_width], showgrid=False, zeroline=False, visible=False),
-            yaxis=dict(range=[0, self.img_height], showgrid=False, zeroline=False, visible=False, scaleanchor='x'),
-            sliders=[dict(
-                steps=[dict(method='animate', args=[[str(i)], dict(mode='immediate', frame=dict(duration=0), transition=dict(duration=0))], label=f"{snapshot.timestamp:.1f}") for i, snapshot in enumerate(state_snapshots)],
-                active=0, x=0.1, y=0, len=0.8
-            )]
-        )
-        fig = go.Figure(data=initial_data, layout=layout, frames=frames)
-        fig.write_html(output_path)
-        print(f"HTML visualization saved to {output_path}") 

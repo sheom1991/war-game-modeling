@@ -10,7 +10,17 @@ class Event:
     actor_id: str
     action: str
     target_id: str = None
-    details: Dict = None
+    details: dict = None
+
+    def to_dict(self):
+        return {
+            "timestamp": self.timestamp,
+            "event_type": self.event_type,
+            "actor_id": self.actor_id,
+            "action": self.action,
+            "target_id": self.target_id,
+            "details": self.details
+        }
 
 @dataclass
 class StateSnapshot:
@@ -39,7 +49,7 @@ class SimulationLogger:
             "events": [asdict(event) for event in self.events],
             "state_snapshots": [asdict(snapshot) for snapshot in self.state_snapshots],
             "metadata": {
-                "timestamp": datetime.now().isoformat(),
+                "timestamp": int(datetime.now().timestamp()),
                 "total_events": len(self.events),
                 "total_snapshots": len(self.state_snapshots)
             }
