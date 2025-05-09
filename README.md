@@ -25,7 +25,6 @@
 ## 프로젝트 구조
 ```
 war-game-modeling/
-├── main.py                 # 메인 실행 파일
 ├── test_simulation.py      # 시뮬레이션 테스트 및 실행
 ├── config.yaml             # 시뮬레이션 설정 파일
 ├── requirements.txt        # 의존성 패키지 목록

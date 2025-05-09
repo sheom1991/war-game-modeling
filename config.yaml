@@ -1,5 +1,5 @@
-output_dir: results/test
-with_drone: true
+output_dir: results/test2
+with_drone: false
 max_time: 300
 fps: 4
 
