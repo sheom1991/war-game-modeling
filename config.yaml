@@ -1,0 +1,38 @@
+output_dir: results/test
+with_drone: true
+max_time: 5
+fps: 20
+
+center_lat: 36.369527
+center_lon: 127.362847
+
+distance_rescale: 0.2
+
+initial_positions:
+  RED:
+    ARTILLERY: [[50, 200], [120, 220], [140, 240], [160, 260], [180, 280], [200, 300]]
+    DRONE: [[150, 250]]
+    TANK: [[500, 350], [520, 350], [540, 350], [560, 350]]
+    ANTI_TANK: [[500, 370], [520, 370], [540, 370], [560, 370], [580, 370], [600, 370]]
+    INFANTRY: [[500, 390], [520, 390], [540, 390], [560, 390], [580, 390], [600, 390], [620, 390], [640, 390], [660, 390], [680, 390]]
+    COMMAND_POST: [[600, 420]]
+  BLUE:
+    ARTILLERY: [[900, 200], [920, 220], [940, 240], [960, 260], [980, 280], [995, 300]]
+    DRONE: [[950, 250]]
+    TANK: [[700, 350], [720, 350], [740, 350], [760, 350]]
+    ANTI_TANK: [[700, 370], [720, 370], [740, 370], [760, 370], [780, 370], [800, 370]]
+    INFANTRY: [[700, 390], [720, 390], [740, 390], [760, 390], [780, 390], [800, 390], [820, 390], [840, 390], [860, 390], [880, 390]]
+    COMMAND_POST: [[800, 420]]
+
+num_tank_red: 2
+num_tank_blue: 2
+num_infantry_red: 3
+num_infantry_blue: 3
+num_at_red: 1
+num_at_blue: 1
+num_artillery_red: 1
+num_artillery_blue: 1
+num_cp_red: 1
+num_cp_blue: 1
+num_drone_red: 1
+num_drone_blue: 1 

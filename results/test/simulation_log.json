@@ -1,0 +1,2981 @@
+{
+  "events": [
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_2",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_ANTI_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_ANTI_TANK_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_1",
+      "action": "FIRE",
+      "target_id": "BLUE_INFANTRY_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_2",
+      "action": "FIRE",
+      "target_id": "BLUE_INFANTRY_1",
+      "details": {
+        "hit": true,
+        "damage": 100,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_3",
+      "action": "FIRE",
+      "target_id": "BLUE_INFANTRY_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_COMMAND_POST_1",
+      "action": "FIRE",
+      "target_id": "BLUE_INFANTRY_1",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_DRONE_1",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_TANK_1",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_TANK_2",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_ANTI_TANK_1",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_1",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_2",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_3",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_COMMAND_POST_1",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_ARTILLERY_1",
+      "action": "FIRE",
+      "target_id": "RED_COMMAND_POST_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          140,
+          243
+        ],
+        "new_position": [
+          140,
+          243
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          492,
+          344
+        ],
+        "new_position": [
+          492,
+          344
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          514,
+          352
+        ],
+        "new_position": [
+          514,
+          352
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_ANTI_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          503,
+          370
+        ],
+        "new_position": [
+          503,
+          370
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          501,
+          386
+        ],
+        "new_position": [
+          501,
+          386
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          529,
+          383
+        ],
+        "new_position": [
+          529,
+          383
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          547,
+          388
+        ],
+        "new_position": [
+          547,
+          388
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          59,
+          195
+        ],
+        "new_position": [
+          59,
+          195
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          954,
+          243
+        ],
+        "new_position": [
+          954,
+          243
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          692,
+          348
+        ],
+        "new_position": [
+          692,
+          348
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          712,
+          351
+        ],
+        "new_position": [
+          712,
+          351
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_ANTI_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          705,
+          371
+        ],
+        "new_position": [
+          705,
+          371
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          725,
+          386
+        ],
+        "new_position": [
+          725,
+          386
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          733,
+          384
+        ],
+        "new_position": [
+          733,
+          384
+        ]
+      }
+    },
+    {
+      "timestamp": 0.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          890,
+          201
+        ],
+        "new_position": [
+          890,
+          201
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_2",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_ANTI_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_1",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 60,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_2",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 10,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_3",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 10,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_DRONE_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_3",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_TANK_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_3",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_TANK_2",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_3",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_ANTI_TANK_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_3",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_2",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_3",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_3",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_3",
+      "details": {
+        "hit": true,
+        "damage": 100,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_COMMAND_POST_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_3",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_ARTILLERY_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_3",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          130,
+          243
+        ],
+        "new_position": [
+          130,
+          243
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          490,
+          348
+        ],
+        "new_position": [
+          490,
+          348
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          507,
+          353
+        ],
+        "new_position": [
+          507,
+          353
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_ANTI_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          506,
+          374
+        ],
+        "new_position": [
+          506,
+          374
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          510,
+          381
+        ],
+        "new_position": [
+          510,
+          381
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          528,
+          374
+        ],
+        "new_position": [
+          528,
+          374
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          50,
+          188
+        ],
+        "new_position": [
+          50,
+          188
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          949,
+          240
+        ],
+        "new_position": [
+          949,
+          240
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          710,
+          349
+        ],
+        "new_position": [
+          710,
+          349
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_ANTI_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          703,
+          370
+        ],
+        "new_position": [
+          703,
+          370
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          728,
+          386
+        ],
+        "new_position": [
+          728,
+          386
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          725,
+          387
+        ],
+        "new_position": [
+          725,
+          387
+        ]
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          884,
+          201
+        ],
+        "new_position": [
+          884,
+          201
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_ANTI_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_2",
+      "action": "FIRE",
+      "target_id": "BLUE_ANTI_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_ANTI_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_ANTI_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_1",
+      "action": "FIRE",
+      "target_id": "BLUE_ANTI_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 100,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_2",
+      "action": "FIRE",
+      "target_id": "BLUE_ANTI_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_DRONE_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_2",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_TANK_2",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_2",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_ANTI_TANK_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_2",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_2",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_2",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_3",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_2",
+      "details": {
+        "hit": true,
+        "damage": 60,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_COMMAND_POST_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_2",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_ARTILLERY_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_2",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          121,
+          241
+        ],
+        "new_position": [
+          121,
+          241
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          493,
+          350
+        ],
+        "new_position": [
+          493,
+          350
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          507,
+          345
+        ],
+        "new_position": [
+          507,
+          345
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_ANTI_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          511,
+          375
+        ],
+        "new_position": [
+          511,
+          375
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          510,
+          391
+        ],
+        "new_position": [
+          510,
+          391
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          50,
+          178
+        ],
+        "new_position": [
+          50,
+          178
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          958,
+          232
+        ],
+        "new_position": [
+          958,
+          232
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          718,
+          352
+        ],
+        "new_position": [
+          718,
+          352
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          721,
+          390
+        ],
+        "new_position": [
+          721,
+          390
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          729,
+          386
+        ],
+        "new_position": [
+          729,
+          386
+        ]
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          882,
+          211
+        ],
+        "new_position": [
+          882,
+          211
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_2",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_2",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_2",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_ANTI_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_2",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_1",
+      "action": "FIRE",
+      "target_id": "BLUE_INFANTRY_2",
+      "details": {
+        "hit": true,
+        "damage": 100,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_DRONE_1",
+      "action": "FIRE",
+      "target_id": "RED_TANK_2",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_TANK_2",
+      "action": "FIRE",
+      "target_id": "RED_ANTI_TANK_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_2",
+      "action": "FIRE",
+      "target_id": "RED_ANTI_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 60,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_3",
+      "action": "FIRE",
+      "target_id": "RED_ANTI_TANK_1",
+      "details": {
+        "hit": true,
+        "damage": 60,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_COMMAND_POST_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_1",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_ARTILLERY_1",
+      "action": "FIRE",
+      "target_id": "RED_TANK_2",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          126,
+          241
+        ],
+        "new_position": [
+          126,
+          241
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          488,
+          346
+        ],
+        "new_position": [
+          488,
+          346
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          517,
+          340
+        ],
+        "new_position": [
+          517,
+          340
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          508,
+          390
+        ],
+        "new_position": [
+          508,
+          390
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          45,
+          171
+        ],
+        "new_position": [
+          45,
+          171
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          966,
+          223
+        ],
+        "new_position": [
+          966,
+          223
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          717,
+          350
+        ],
+        "new_position": [
+          717,
+          350
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          726,
+          389
+        ],
+        "new_position": [
+          726,
+          389
+        ]
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          882,
+          213
+        ],
+        "new_position": [
+          882,
+          213
+        ]
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_1",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_2",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_TANK_2",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_2",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "COMBAT",
+      "actor_id": "RED_INFANTRY_1",
+      "action": "FIRE",
+      "target_id": "BLUE_TANK_2",
+      "details": {
+        "hit": true,
+        "damage": 100,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_DRONE_1",
+      "action": "FIRE",
+      "target_id": "RED_TANK_2",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_TANK_2",
+      "action": "FIRE",
+      "target_id": "RED_TANK_2",
+      "details": {
+        "hit": false,
+        "damage": 0,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_INFANTRY_3",
+      "action": "FIRE",
+      "target_id": "RED_TANK_2",
+      "details": {
+        "hit": true,
+        "damage": 30,
+        "hit_probability": 0.95
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_COMMAND_POST_1",
+      "action": "FIRE",
+      "target_id": "RED_INFANTRY_1",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "COMBAT",
+      "actor_id": "BLUE_ARTILLERY_1",
+      "action": "FIRE",
+      "target_id": "RED_TANK_2",
+      "details": {
+        "hit": true,
+        "damage": 50,
+        "hit_probability": 0.45
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          133,
+          239
+        ],
+        "new_position": [
+          133,
+          239
+        ]
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_TANK",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          478,
+          343
+        ],
+        "new_position": [
+          478,
+          343
+        ]
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          509,
+          392
+        ],
+        "new_position": [
+          509,
+          392
+        ]
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "RED_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          47,
+          176
+        ],
+        "new_position": [
+          47,
+          176
+        ]
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_DRONE",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          969,
+          220
+        ],
+        "new_position": [
+          969,
+          220
+        ]
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_INFANTRY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          732,
+          382
+        ],
+        "new_position": [
+          732,
+          382
+        ]
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "event_type": "MOVEMENT",
+      "actor_id": "BLUE_ARTILLERY",
+      "action": "MOVE",
+      "target_id": null,
+      "details": {
+        "old_position": [
+          890,
+          208
+        ],
+        "new_position": [
+          890,
+          208
+        ]
+      }
+    }
+  ],
+  "state_snapshots": [
+    {
+      "timestamp": 0.0,
+      "units": [
+        {
+          "id": "RED_DRONE",
+          "type": "DRONE",
+          "team": "RED",
+          "position": [
+            150,
+            250
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            500,
+            350
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            520,
+            350
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "RED",
+          "position": [
+            500,
+            370
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            500,
+            390
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            520,
+            390
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            540,
+            390
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "RED",
+          "position": [
+            600,
+            420
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "RED",
+          "position": [
+            50,
+            200
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_DRONE",
+          "type": "DRONE",
+          "team": "BLUE",
+          "position": [
+            950,
+            250
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            700,
+            350
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            720,
+            350
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "BLUE",
+          "position": [
+            700,
+            370
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            700,
+            390
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            720,
+            390
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            740,
+            390
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "BLUE",
+          "position": [
+            800,
+            420
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "BLUE",
+          "position": [
+            900,
+            200
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        }
+      ],
+      "terrain_state": {
+        "timestamp": 0.0
+      },
+      "combat_state": {
+        "timestamp": 0.0
+      }
+    },
+    {
+      "timestamp": 1.0,
+      "units": [
+        {
+          "id": "RED_DRONE",
+          "type": "DRONE",
+          "team": "RED",
+          "position": [
+            140,
+            243
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            492,
+            344
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            514,
+            352
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "RED",
+          "position": [
+            503,
+            370
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            501,
+            386
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            529,
+            383
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            547,
+            388
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "RED",
+          "position": [
+            600,
+            420
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -70.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "RED",
+          "position": [
+            59,
+            195
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_DRONE",
+          "type": "DRONE",
+          "team": "BLUE",
+          "position": [
+            954,
+            243
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            692,
+            348
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            712,
+            351
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "BLUE",
+          "position": [
+            705,
+            371
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            700,
+            390
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -110.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            725,
+            386
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            733,
+            384
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "BLUE",
+          "position": [
+            800,
+            420
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "BLUE",
+          "position": [
+            890,
+            201
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        }
+      ],
+      "terrain_state": {
+        "timestamp": 1.0
+      },
+      "combat_state": {
+        "timestamp": 1.0
+      }
+    },
+    {
+      "timestamp": 2.0,
+      "units": [
+        {
+          "id": "RED_DRONE",
+          "type": "DRONE",
+          "team": "RED",
+          "position": [
+            130,
+            243
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            490,
+            348
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            507,
+            353
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "RED",
+          "position": [
+            506,
+            374
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            510,
+            381
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            528,
+            374
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            547,
+            388
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -120.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "RED",
+          "position": [
+            600,
+            420
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -70.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "RED",
+          "position": [
+            50,
+            188
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_DRONE",
+          "type": "DRONE",
+          "team": "BLUE",
+          "position": [
+            949,
+            240
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            692,
+            348
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -10.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            710,
+            349
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "BLUE",
+          "position": [
+            703,
+            370
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            700,
+            390
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -110.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            728,
+            386
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            725,
+            387
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "BLUE",
+          "position": [
+            800,
+            420
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "BLUE",
+          "position": [
+            884,
+            201
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        }
+      ],
+      "terrain_state": {
+        "timestamp": 2.0
+      },
+      "combat_state": {
+        "timestamp": 2.0
+      }
+    },
+    {
+      "timestamp": 3.0,
+      "units": [
+        {
+          "id": "RED_DRONE",
+          "type": "DRONE",
+          "team": "RED",
+          "position": [
+            121,
+            241
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            493,
+            350
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            507,
+            345
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "RED",
+          "position": [
+            511,
+            375
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            510,
+            391
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            528,
+            374
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -120.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            547,
+            388
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -120.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "RED",
+          "position": [
+            600,
+            420
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -70.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "RED",
+          "position": [
+            50,
+            178
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_DRONE",
+          "type": "DRONE",
+          "team": "BLUE",
+          "position": [
+            958,
+            232
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            692,
+            348
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -10.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            718,
+            352
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "BLUE",
+          "position": [
+            703,
+            370
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -160.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            700,
+            390
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -110.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            721,
+            390
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            729,
+            386
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "BLUE",
+          "position": [
+            800,
+            420
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "BLUE",
+          "position": [
+            882,
+            211
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        }
+      ],
+      "terrain_state": {
+        "timestamp": 3.0
+      },
+      "combat_state": {
+        "timestamp": 3.0
+      }
+    },
+    {
+      "timestamp": 4.0,
+      "units": [
+        {
+          "id": "RED_DRONE",
+          "type": "DRONE",
+          "team": "RED",
+          "position": [
+            126,
+            241
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            488,
+            346
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_TANK",
+          "type": "TANK",
+          "team": "RED",
+          "position": [
+            517,
+            340
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 50.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "RED",
+          "position": [
+            511,
+            375
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -20.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            508,
+            390
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            528,
+            374
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -120.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_INFANTRY",
+          "type": "INFANTRY",
+          "team": "RED",
+          "position": [
+            547,
+            388
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -120.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "RED",
+          "position": [
+            600,
+            420
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -70.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "RED_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "RED",
+          "position": [
+            45,
+            171
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_DRONE",
+          "type": "DRONE",
+          "team": "BLUE",
+          "position": [
+            966,
+            223
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            692,
+            348
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -10.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_TANK",
+          "type": "TANK",
+          "team": "BLUE",
+          "position": [
+            717,
+            350
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 50.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ANTI_TANK",
+          "type": "ANTI_TANK",
+          "team": "BLUE",
+          "position": [
+            703,
+            370
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -160.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            700,
+            390
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": -110.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            721,
+            390
+          ],
+          "status": "K-kill",
+          "action": "Fire",
+          "health": 0.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_INFANTRY",
+          "type": "INFANTRY",
+          "team": "BLUE",
+          "position": [
+            726,
+            389
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_COMMAND_POST",
+          "type": "COMMAND_POST",
+          "team": "BLUE",
+          "position": [
+            800,
+            420
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        },
+        {
+          "id": "BLUE_ARTILLERY",
+          "type": "ARTILLERY",
+          "team": "BLUE",
+          "position": [
+            882,
+            213
+          ],
+          "status": "Alive",
+          "action": "Stop",
+          "health": 100.0,
+          "target_list": [],
+          "eligible_target_list": []
+        }
+      ],
+      "terrain_state": {
+        "timestamp": 4.0
+      },
+      "combat_state": {
+        "timestamp": 4.0
+      }
+    }
+  ],
+  "metadata": {
+    "timestamp": "2025-05-09T14:59:05.948177",
+    "total_events": 115,
+    "total_snapshots": 5
+  }
+}
