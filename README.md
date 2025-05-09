@@ -1,23 +1,25 @@
 # War Game Simulation
 
 ## 개요
-이 프로젝트는 전쟁 게임 시뮬레이션을 구현한 Python 기반 애플리케이션입니다. background.png 이미지를 기반으로 유닛의 위치, 이동, 전투를 시뮬레이션하고 시각화합니다.
+이 프로젝트는 전쟁 게임 시뮬레이션을 구현한 Python 기반 애플리케이션입니다. `background.png` 이미지를 기반으로 유닛의 위치, 이동, 전투를 시뮬레이션하고 시각화합니다.
 
 ## 주요 기능
 - 유닛 위치 및 이동 시뮬레이션
 - 전투 시스템 구현
-- 지형 효과 반영
 - 시각화 및 애니메이션 생성
-- HTML 기반 인터랙티브 시각화
-- 전투 로그 및 메트릭스 분석
+- 전투 로그 저장
 
 ## TODO
+- 전체적으로 화력, 기동, 탐지, 지형 잘 반영되었는지 확인
 - 커맨드 레벨 반영해야 함
 - 유닛의 이동방향 조정 필요
 - 지형 특성 반영 구조 추가
     - 가시선 분석 (현재 x, y 좌표만 사용) - `combat.py`, `def los` function 내 조정 필요
     - 수로 등 장애물 인식
-- 
+- flowchart와 흐름 일치하는지 검토
+- target_list, eligible_target_list 고려 (지금은 target_id로 제작)
+- `background.png` scale 조정 (조금 더 확대하기)
+- 화력: 표적 우선순위 고려하지 않은 것 같음
 
 
 ## 프로젝트 구조
@@ -46,8 +48,8 @@ war-game-modeling/
 └── results/                # 시뮬레이션 결과
     ├── background.png      # 배경 이미지
     ├── simulation_log.json # 시뮬레이션 로그
-    ├── simulation_metrics.png # 시뮬레이션 결과 그래프 - 수정 필요
-    ├── dem_only.png        # 종료 시점 이미지
+    ├── simulation_metrics.png # 시뮬레이션 결과 그래프
+    ├── final_state.png        # 종료 시점 이미지
     └── simulation.mp4      # 시뮬레이션 동영상
 ```
 
@@ -59,10 +61,12 @@ war-game-modeling/
    - 이동 처리
    - 이벤트 로깅
    - 상태 스냅샷 저장
-3. **시각화**: 시뮬레이션 결과를 시각화합니다.
-   - MP4 애니메이션 생성
-   - HTML 인터랙티브 시각화 생성
-   - 메트릭스 그래프 생성
+3. **시각화 및 로그 저장**: 시뮬레이션 결과를 시각화하고 로그를 저장합니다.
+   - MP4 애니메이션 생성 `simulation.mp4`
+   - Final State 이미지 저장 `final_state.png`
+   - 결과 그래프 생성 `simulation_metrics.png`
+   - 요약 로그 (공격 정보) 저장 `log.txt`
+   - 전체 로그 저장 `simulation_log.json`
 
 ## 좌표계
 - (0,0): background.png의 좌상단(왼쪽 위) 픽셀
