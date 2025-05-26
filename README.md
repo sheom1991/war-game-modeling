@@ -6,7 +6,7 @@
 ## 프로젝트 구조
 
 ```
-war-game-modeling-1/
+war-game-modeling/
 ├── config.yaml           # 시뮬레이션 설정 파일
 ├── simulation.py         # 메인 시뮬레이션 로직
 ├── requirements.txt      # 프로젝트 의존성
