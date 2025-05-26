@@ -1,4 +1,5 @@
-# 워 게임 시뮬레이션
+# 워 게임 시뮬레이션 (War Game Simulation)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 이 프로젝트는 워 게임을 시뮬레이션하는 Python (pygame) 기반 프로그램입니다. 두 팀(RED와 BLUE)이 다양한 유닛(포병, 드론, 전차, 대전차, 보병, 지휘소)을 사용하여 전투를 수행합니다.
 
@@ -96,8 +97,10 @@ python simulation.py --time-scale 2.0 --show-detection --show-fire
 
 ## 결과
 
-시뮬레이션 결과는 `results/` 디렉토리에 저장됩니다:
-- `simulation.mp4`: 시뮬레이션 비디오 (설정된 경우)
+시뮬레이션 결과는 python 파일을 실행하면 확인할 수 있습니다.
+또는 [`results/`](./results/simulation_final.mp4) 디렉토리에 저장된 결과를 확인할 수 있습니다.
+
+<img src = "results/war_game_sample_image.png">
 
 ## 모델 파일 상세 설명
 
