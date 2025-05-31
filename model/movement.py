@@ -102,6 +102,7 @@ class Movement:
                 # maneuver_objective는 리스트이므로 첫 번째 목표 지점을 사용
                 base_objective = command.maneuver_objective[0]
                 # 2차원 좌표에 랜덤 오차를 한 번에 더함
+                # 목적지가 다 겹칠 수 있으니, -100~+100 uniform dist 적용해서 더해서 좀 흐트러지게 설정.
                 return tuple(x + random.uniform(-100, 100) for x in base_objective)
         return None
 
