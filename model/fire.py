@@ -229,6 +229,17 @@ class Fire:
             return None
         
         # 직사화기 처리 (기존 코드)
+        """
+        직사화기(소총/대전차/지휘관) 사격 및 피해 처리
+        [1] 명중확률 P_h 불러오기
+        [2] 난수로 명중 여부 판정
+        [3] 조건부 살상확률 P_k/h 불러오기 → 보간/테이블 참조는 ProbabilitySystem 에서
+        [4] 파괴확률 계산 (보간법) → determine_*_damage 에서 누적확률 방식으로 수행
+        [5] 난수로 피해 타입 결정
+        [6] 피해 타입별 표적 상태 무력화 판정
+            - 탱크·곡사포: MF-kill 이상이면 “무력화 성공” (재탐색 대신 후속 사격 중지)
+            - 소총·대전차·지휘관: 치명상(Fatal)이면 “무력화 성공”
+        """
         protection_state = self.get_protection_state(target)
         hit_prob = ProbabilitySystem.get_hit_probability(attacker.unit_type, target.unit_type, distance, protection_state)
         
