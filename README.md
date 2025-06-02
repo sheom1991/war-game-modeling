@@ -41,15 +41,15 @@ python simulation.py
 ```
 
 옵션:
-- `--time-scale`: 시간 스케일 조정 (기본값: 1.0)
-- `--sim-speed`: 시뮬레이션 속도 조정 (기본값: 1.0)
-- `--show-detection`: 탐지 시각화 활성화
-- `--show-eligible-targets`: 사격 가능 타겟 시각화 활성화
-- `--show-fire`: 사격 시각화 활성화
+- `--time-scale`: 시간 스케일 조정 (기본값: 5.0)
+- `--sim_speed`: 시뮬레이션 속도 조정 (기본값: 1.0)
+- `--detection`: 탐지 시각화 활성화
+- `--eligible_TL`: 사격 가능 시각화 활성화
+- `--fire`: 사격 시각화 활성화
 
 예시:
 ```bash
-python simulation.py --time-scale 2.0 --show-detection --show-fire
+python simulation.py --time-scale 2.0 --eligible_TL T --fire T
 ```
 
 ## 설정 파일 (config.yaml)
