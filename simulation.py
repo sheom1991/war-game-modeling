@@ -179,7 +179,15 @@ class Simulation:
                 if event.type == pygame.QUIT:
                     self.visualizer.close()
                     return 
-                
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_SPACE:
+                        self.visualizer.paused = not self.visualizer.paused
+
+
+            if self.visualizer.paused:
+                self.visualizer.show_pause_screen()
+                continue
+
             # 현재 시간에 발생할 모든 이벤트 수집
             current_events = []
             while self.events and self.events[0].time <= self.current_time:

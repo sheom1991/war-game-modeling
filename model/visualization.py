@@ -57,7 +57,7 @@ class Visualizer:
         self.events = []
         self.current_time = 0.0
         self.last_frame_time = 0.0  # 이전 프레임 시간 추가
-        
+        self.paused = False
         # Frame saving settings
         self.frame_dir = "frames"
         self.frame_count = 0
@@ -464,6 +464,22 @@ class Visualizer:
     def stop_frame_capture(self):
         """Stop saving frames"""
         self.save_frames = False 
+
+    def show_pause_screen(self):
+        """일시정지 상태를 처리 - 화면 고정, SPACE로 재개"""
+        font = pygame.font.SysFont(None, 48)
+        text = font.render("Paused - Press SPACE to Resume", True, (255, 255, 255))
+        text_rect = text.get_rect(center=(self.screen.get_width() // 2, self.screen.get_height() // 2))
+        
+        self.screen.blit(text, text_rect)
+        pygame.display.flip()
+
+
+
+
+
+        
+
 
 
 
